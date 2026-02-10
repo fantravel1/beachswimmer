@@ -21,6 +21,7 @@
   <meta name="twitter:description" content="Not just beautiful — swimmable. Find the world's best beaches rated by SwimScore™.">
 
   <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -113,7 +114,20 @@
   <main id="main">
 
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero hero--image">
+      <img
+        class="hero__bg"
+        src="https://images.unsplash.com/photo-1747021627449-945b5723ddbe?w=1200&q=80&auto=format&fit=crop"
+        srcset="
+          https://images.unsplash.com/photo-1747021627449-945b5723ddbe?w=600&q=75&auto=format&fit=crop 600w,
+          https://images.unsplash.com/photo-1747021627449-945b5723ddbe?w=1200&q=80&auto=format&fit=crop 1200w,
+          https://images.unsplash.com/photo-1747021627449-945b5723ddbe?w=1920&q=80&auto=format&fit=crop 1920w"
+        sizes="100vw"
+        alt="Crystal-clear turquoise beach water with white sand visible through the water"
+        width="1920"
+        height="1080"
+        fetchpriority="high"
+      >
       <div class="container">
         <h1>The World's Best Beaches for Real Swimming</h1>
         <p class="hero__tagline">Not just beautiful — swimmable. Every beach rated by SwimScore™ for water clarity, safety, entry, depth, and real swim conditions.</p>
@@ -154,6 +168,22 @@
       </div>
     </section>
 
+    <!-- Water Clarity Image Strip -->
+    <div class="image-strip" role="img" aria-label="Sunlight rays penetrating crystal-clear blue water">
+      <img
+        src="https://images.unsplash.com/photo-1530053969600-caed2596d242?w=1200&q=80&auto=format&fit=crop"
+        srcset="
+          https://images.unsplash.com/photo-1530053969600-caed2596d242?w=600&q=75&auto=format&fit=crop 600w,
+          https://images.unsplash.com/photo-1530053969600-caed2596d242?w=1200&q=80&auto=format&fit=crop 1200w,
+          https://images.unsplash.com/photo-1530053969600-caed2596d242?w=1920&q=80&auto=format&fit=crop 1920w"
+        sizes="100vw"
+        alt="Sunlight rays penetrating crystal-clear blue ocean water from below the surface"
+        width="1920"
+        height="480"
+        loading="lazy"
+      >
+    </div>
+
     <!-- Swim Types -->
     <section class="info-section" aria-labelledby="swimtypes-heading">
       <div class="container">
@@ -174,25 +204,83 @@
       </div>
     </section>
 
+    <!-- Open Water Swim Strip -->
+    <div class="image-strip image-strip--short" role="img" aria-label="A person swimming in open ocean water near coastal rocks">
+      <img
+        src="https://images.unsplash.com/photo-1682695797221-8164ff1fafc9?w=1200&q=80&auto=format&fit=crop"
+        srcset="
+          https://images.unsplash.com/photo-1682695797221-8164ff1fafc9?w=600&q=75&auto=format&fit=crop 600w,
+          https://images.unsplash.com/photo-1682695797221-8164ff1fafc9?w=1200&q=80&auto=format&fit=crop 1200w,
+          https://images.unsplash.com/photo-1682695797221-8164ff1fafc9?w=1920&q=80&auto=format&fit=crop 1920w"
+        sizes="100vw"
+        alt="A person swimming in pristine open ocean water alongside a rocky coastline"
+        width="1920"
+        height="400"
+        loading="lazy"
+      >
+    </div>
+
     <!-- Featured Destinations -->
     <section class="info-section" aria-labelledby="destinations-heading">
       <div class="container">
         <h2 id="destinations-heading">Top Swimming Destinations</h2>
         <div class="card-grid">
           <article class="card">
-            <h3 class="card__title"><a href="/countries/greece/">Greece</a></h3>
-            <p class="card__meta">Mediterranean</p>
-            <p class="card__desc">Crystal lagoons, protected coves, and some of the clearest water on Earth. Greece is a swimmer's paradise.</p>
+            <img
+              class="card__image"
+              src="https://images.unsplash.com/photo-1587974137070-5fc1b61c43f7?w=600&q=80&auto=format&fit=crop"
+              srcset="
+                https://images.unsplash.com/photo-1587974137070-5fc1b61c43f7?w=400&q=75&auto=format&fit=crop 400w,
+                https://images.unsplash.com/photo-1587974137070-5fc1b61c43f7?w=600&q=80&auto=format&fit=crop 600w"
+              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+              alt="Aerial view of swimmers in crystal-clear turquoise water at a Greek island beach"
+              width="600"
+              height="400"
+              loading="lazy"
+            >
+            <div class="card__body">
+              <h3 class="card__title"><a href="/countries/greece/">Greece</a></h3>
+              <p class="card__meta">Mediterranean</p>
+              <p class="card__desc">Crystal lagoons, protected coves, and some of the clearest water on Earth. Greece is a swimmer's paradise.</p>
+            </div>
           </article>
           <article class="card">
-            <h3 class="card__title"><a href="/regions/mallorca/">Mallorca</a></h3>
-            <p class="card__meta">Balearic Islands, Spain</p>
-            <p class="card__desc">Turquoise calas with sand entry, warm water from May through October, and sheltered coves for every swim level.</p>
+            <img
+              class="card__image"
+              src="https://images.unsplash.com/photo-1663741981089-72f7db9a9717?w=600&q=80&auto=format&fit=crop"
+              srcset="
+                https://images.unsplash.com/photo-1663741981089-72f7db9a9717?w=400&q=75&auto=format&fit=crop 400w,
+                https://images.unsplash.com/photo-1663741981089-72f7db9a9717?w=600&q=80&auto=format&fit=crop 600w"
+              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+              alt="Turquoise cala surrounded by limestone cliffs in Mallorca, Spain"
+              width="600"
+              height="400"
+              loading="lazy"
+            >
+            <div class="card__body">
+              <h3 class="card__title"><a href="/regions/mallorca/">Mallorca</a></h3>
+              <p class="card__meta">Balearic Islands, Spain</p>
+              <p class="card__desc">Turquoise calas with sand entry, warm water from May through October, and sheltered coves for every swim level.</p>
+            </div>
           </article>
           <article class="card">
-            <h3 class="card__title"><a href="/cities/barcelona/swimming-beaches/">Barcelona</a></h3>
-            <p class="card__meta">Catalonia, Spain</p>
-            <p class="card__desc">City swimming with clean water, reliable conditions, and easy train access to hidden Costa Brava coves.</p>
+            <img
+              class="card__image"
+              src="https://images.unsplash.com/photo-1599484233778-5bdc6b69bbe3?w=600&q=80&auto=format&fit=crop"
+              srcset="
+                https://images.unsplash.com/photo-1599484233778-5bdc6b69bbe3?w=400&q=75&auto=format&fit=crop 400w,
+                https://images.unsplash.com/photo-1599484233778-5bdc6b69bbe3?w=600&q=80&auto=format&fit=crop 600w"
+              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+              alt="Barcelona coastline and Mediterranean sea with clear water during golden hour"
+              width="600"
+              height="400"
+              loading="lazy"
+            >
+            <div class="card__body">
+              <h3 class="card__title"><a href="/cities/barcelona/swimming-beaches/">Barcelona</a></h3>
+              <p class="card__meta">Catalonia, Spain</p>
+              <p class="card__desc">City swimming with clean water, reliable conditions, and easy train access to hidden Costa Brava coves.</p>
+            </div>
           </article>
         </div>
       </div>
@@ -204,24 +292,52 @@
         <h2 id="beaches-heading">Featured Beaches</h2>
         <div class="card-grid">
           <article class="card">
-            <h3 class="card__title"><a href="/beaches/elafonissi/">Elafonissi Beach</a></h3>
-            <p class="card__meta">Crete, Greece</p>
-            <span class="card__score">SwimScore™ 92</span>
-            <div class="tags">
-              <span class="tag">Calm Lagoon Swim</span>
-              <span class="tag">Family Swim</span>
+            <img
+              class="card__image"
+              src="https://images.unsplash.com/photo-1733906824760-00ec966bf382?w=600&q=80&auto=format&fit=crop"
+              srcset="
+                https://images.unsplash.com/photo-1733906824760-00ec966bf382?w=400&q=75&auto=format&fit=crop 400w,
+                https://images.unsplash.com/photo-1733906824760-00ec966bf382?w=600&q=80&auto=format&fit=crop 600w"
+              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+              alt="Two people swimming in shallow, crystal-clear turquoise water near a sandy beach"
+              width="600"
+              height="400"
+              loading="lazy"
+            >
+            <div class="card__body">
+              <h3 class="card__title"><a href="/beaches/elafonissi/">Elafonissi Beach</a></h3>
+              <p class="card__meta">Crete, Greece</p>
+              <span class="card__score">SwimScore™ 92</span>
+              <div class="tags">
+                <span class="tag">Calm Lagoon Swim</span>
+                <span class="tag">Family Swim</span>
+              </div>
+              <p class="card__desc">Pink-sand lagoon with knee-deep turquoise water and a gentle wade to a small island. One of the safest, most beautiful swims in the Mediterranean.</p>
             </div>
-            <p class="card__desc">Pink-sand lagoon with knee-deep turquoise water and a gentle wade to a small island. One of the safest, most beautiful swims in the Mediterranean.</p>
           </article>
           <article class="card">
-            <h3 class="card__title"><a href="/beaches/cala-varques/">Cala Varques</a></h3>
-            <p class="card__meta">Mallorca, Spain</p>
-            <span class="card__score">SwimScore™ 88</span>
-            <div class="tags">
-              <span class="tag">Snorkel Swim</span>
-              <span class="tag">Calm Lagoon Swim</span>
+            <img
+              class="card__image"
+              src="https://images.unsplash.com/photo-1603259618142-2330101e3489?w=600&q=80&auto=format&fit=crop"
+              srcset="
+                https://images.unsplash.com/photo-1603259618142-2330101e3489?w=400&q=75&auto=format&fit=crop 400w,
+                https://images.unsplash.com/photo-1603259618142-2330101e3489?w=600&q=80&auto=format&fit=crop 600w"
+              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+              alt="Snorkeler swimming through crystal-clear water with visibility to the ocean floor"
+              width="600"
+              height="400"
+              loading="lazy"
+            >
+            <div class="card__body">
+              <h3 class="card__title"><a href="/beaches/cala-varques/">Cala Varques</a></h3>
+              <p class="card__meta">Mallorca, Spain</p>
+              <span class="card__score">SwimScore™ 88</span>
+              <div class="tags">
+                <span class="tag">Snorkel Swim</span>
+                <span class="tag">Calm Lagoon Swim</span>
+              </div>
+              <p class="card__desc">Hidden cove with crystal-clear water, underwater caves, and a sheltered swim area surrounded by pine-covered cliffs.</p>
             </div>
-            <p class="card__desc">Hidden cove with crystal-clear water, underwater caves, and a sheltered swim area surrounded by pine-covered cliffs.</p>
           </article>
         </div>
       </div>

@@ -282,6 +282,45 @@ p {
   text-align: center;
 }
 
+.hero--image {
+  position: relative;
+  padding: var(--space-3xl) 0;
+  overflow: hidden;
+  background: var(--color-text);
+}
+
+.hero--image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.5) 100%);
+  z-index: 1;
+}
+
+.hero--image .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero--image h1 {
+  color: var(--color-white);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero--image .hero__tagline {
+  color: rgba(255,255,255,0.92);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  z-index: 0;
+}
+
 .hero h1 {
   font-size: 2rem;
   margin-bottom: var(--space-sm);
@@ -310,6 +349,29 @@ p {
   background: var(--color-ocean-dark);
   color: var(--color-white);
   text-decoration: none;
+}
+
+/* --- Full-Width Image Strip --- */
+.image-strip {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  max-height: 320px;
+}
+
+.image-strip img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-strip--short {
+  max-height: 200px;
+}
+
+.image-strip--short img {
+  height: 200px;
 }
 
 /* --- SwimScore Badge --- */
@@ -374,13 +436,31 @@ p {
   background: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: var(--space-lg);
+  padding: 0;
+  overflow: hidden;
   transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .card:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
+}
+
+.card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.card__body {
+  padding: var(--space-lg);
+}
+
+/* Cards without images still get padding */
+.card:not(:has(.card__image)) {
+  padding: var(--space-lg);
 }
 
 .card__title {
@@ -681,9 +761,20 @@ p {
   .hero h1 { font-size: 2.75rem; }
   .hero__tagline { font-size: 1.2rem; }
 
+  .hero--image {
+    padding: 5rem 0;
+  }
+
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .card__image {
+    height: 220px;
+  }
+
+  .image-strip { max-height: 400px; }
+  .image-strip img { height: 400px; }
 
   .quiz-options {
     grid-template-columns: repeat(2, 1fr);
@@ -707,6 +798,17 @@ p {
    ============================================ */
 @media (min-width: 1024px) {
   .hero h1 { font-size: 3.25rem; }
+
+  .hero--image {
+    padding: 6rem 0;
+  }
+
+  .image-strip { max-height: 480px; }
+  .image-strip img { height: 480px; }
+
+  .card__image {
+    height: 240px;
+  }
 
   .card-grid {
     grid-template-columns: repeat(3, 1fr);
