@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What Kind of Swimmer Are You? — Personality Quiz | BeachSwimmer</title>
+  <meta name="description" content="Take the BeachSwimmer personality quiz to discover your swim type. Lagoon Lover, Wave Charger, Snorkel Swimmer, or Cold Plunger? Get personalized beach recommendations.">
+  <link rel="canonical" href="https://beachswimmer.com/quiz/">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="What Kind of Swimmer Are You? — Personality Quiz">
+  <meta property="og:description" content="Discover your swim type and get personalized beach recommendations. Are you a Lagoon Lover, Wave Charger, or Cold Plunger?">
+  <meta property="og:url" content="https://beachswimmer.com/quiz/">
+  <meta property="og:site_name" content="BeachSwimmer">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://beachswimmer.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Swimmer Quiz", "item": "https://beachswimmer.com/quiz/"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "What Kind of Swimmer Are You?",
+    "description": "Interactive personality quiz that matches you with your ideal swim type and recommends beaches worldwide.",
+    "url": "https://beachswimmer.com/quiz/"
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container container--wide">
+      <a href="/" class="site-logo" aria-label="BeachSwimmer home">Beach<span>Swimmer</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="/countries/greece/">Countries</a></li>
+          <li><a href="/regions/mallorca/">Regions</a></li>
+          <li><a href="/lists/">Swim Lists</a></li>
+          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/quiz/" aria-current="page">Find Your Swim</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-current="page">Swimmer Quiz</li>
+        </ol>
+      </nav>
+
+      <section class="hero">
+        <h1>What Kind of Swimmer Are You?</h1>
+        <p class="hero__tagline">Answer 5 questions. Discover your swim personality. Get beach recommendations that actually match how you swim.</p>
+      </section>
+
+      <!-- Quiz Container -->
+      <div id="quiz-container">
+
+        <!-- Question 1 -->
+        <div class="quiz-step" id="q1" aria-labelledby="q1-heading">
+          <h2 id="q1-heading">1. Your ideal water temperature?</h2>
+          <div class="quiz-options" role="radiogroup" aria-label="Water temperature preference">
+            <button class="quiz-option" data-category="warm" onclick="selectAnswer(this, 'q2')">
+              <div class="quiz-option__icon" aria-hidden="true">~</div>
+              <div class="quiz-option__title">Warm bath (25°C+)</div>
+              <p class="text-muted" style="font-size:0.85rem;margin:0">I want to float without thinking about temperature</p>
+            </button>
+            <button class="quiz-option" data-category="moderate" onclick="selectAnswer(this, 'q2')">
+              <div class="quiz-option__icon" aria-hidden="true">~</div>
+              <div class="quiz-option__title">Refreshing (20–24°C)</div>
+              <p class="text-muted" style="font-size:0.85rem;margin:0">Cool enough to feel alive, warm enough to stay in</p>
+            </button>
+            <button class="quiz-option" data-category="cold" onclick="selectAnswer(this, 'q2')">
+              <div class="quiz-option__icon" aria-hidden="true">~</div>
+              <div class="quiz-option__title">Cold and invigorating (&lt;18°C)</div>
+              <p class="text-muted" style="font-size:0.85rem;margin:0">The colder, the better. I live for the gasp.</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz-step" id="q2" style="display:none" aria-labelledby="q2-heading">
+          <h2 id="q2-heading">2. What do you want from the water?</h2>
+          <div class="quiz-options" role="radiogroup" aria-label="Swim style preference">
+            <button class="quiz-option" data-category="calm" onclick="selectAnswer(this, 'q3')">
+              <div class="quiz-option__icon" aria-hidden="true">~</div>
+              <div class="quiz-option__title">Calm and clear</div>
+              <p class="text-muted" style="font-size:0.85rem;margin:0">Glass-flat water, total visibility, peaceful floating</p>
+            </button>
+            <button class="quiz-option" data-category="explore" onclick="selectAnswer(this, 'q3')">
+              <div class="quiz-option__icon" aria-hidden="true">~</div>
+              <div class="quiz-option__title">Something to explore</div>
+              <p class="text-muted" style="font-size:0.85rem;margin:0">Rocks, caves, fish, underwater worlds</p>
+            </button>
+            <button class="quiz-option" data-category="waves" onclick="selectAnswer(this, 'q3')">
+              <div class="quiz-option__icon" aria-hidden="true">~</div>
+              <div class="quiz-option__title">Energy and movement</div>
+              <p class="text-muted" style="font-size:0.85rem;margin:0">Waves, currents, the push and pull of the ocean</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="quiz-step" id="q3" style="display:none" aria-labelledby="q3-heading">
+          <h2 id="q3-heading">3. How do you prefer to enter the water?</h2>
+          <div class="quiz-options" role="radiogroup" aria-label="Entry preference">
+            <button class="quiz-option" data-category="sand" onclick="selectAnswer(this, 'q4')">
+              <div class="quiz-option__icon" aria-hidden="true">~</div>
+              <div class="quiz-option__title">Walk in from sand</div>
+              <p class="text-muted" style="font-size:0.85rem;margin:0">Gradual, soft, no surprises</p>
+            </button>
+            <button class="quiz-option" data-category="rock" onclick="selectAnswer(this, 'q4')">
+              <div class="quiz-option__icon" aria-hidden="true">~</div>
+              <div class="quiz-option__title">Scramble over rocks</div>
+              <p class="text-muted" style="font-size:0.85rem;margin:0">A bit of an adventure before the swim</p>
+            </button>
+            <button class="quiz-option" data-category="cliff" onclick="selectAnswer(this, 'q4')">
+              <div class="quiz-option__icon" aria-hidden="true">~</div>
+              <div class="quiz-option__title">Jump or slide from a cliff</div>
+              <p class="text-muted" style="font-size:0.85rem;margin:0">The entry is part of the thrill</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="quiz-step" id="q4" style="display:none" aria-labelledby="q4-heading">
+          <h2 id="q4-heading">4. Who are you swimming with?</h2>
+          <div class="quiz-options" role="radiogroup" aria-label="Swimming companion preference">
+            <button class="quiz-option" data-category="family" onclick="selectAnswer(this, 'q5')">
+              <div class="quiz-option__icon" aria-hidden="true">~</div>
+              <div class="quiz-option__title">Family with kids</div>
+              <p class="text-muted" style="font-size:0.85rem;margin:0">Safety and shallows matter most</p>
+            </button>
+            <button class="quiz-option" data-category="partner" onclick="selectAnswer(this, 'q5')">
+              <div class="quiz-option__icon" aria-hidden="true">~</div>
+              <div class="quiz-option__title">Partner or friends</div>
+              <p class="text-muted" style="font-size:0.85rem;margin:0">A good swim in a beautiful setting</p>
+            </button>
+            <button class="quiz-option" data-category="solo" onclick="selectAnswer(this, 'q5')">
+              <div class="quiz-option__icon" aria-hidden="true">~</div>
+              <div class="quiz-option__title">Solo</div>
+              <p class="text-muted" style="font-size:0.85rem;margin:0">Just me and the water</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="quiz-step" id="q5" style="display:none" aria-labelledby="q5-heading">
+          <h2 id="q5-heading">5. How long do you like to swim?</h2>
+          <div class="quiz-options" role="radiogroup" aria-label="Swim duration preference">
+            <button class="quiz-option" data-category="short" onclick="showResult(this)">
+              <div class="quiz-option__icon" aria-hidden="true">~</div>
+              <div class="quiz-option__title">Quick dip (10–15 min)</div>
+              <p class="text-muted" style="font-size:0.85rem;margin:0">In, refreshed, out</p>
+            </button>
+            <button class="quiz-option" data-category="medium" onclick="showResult(this)">
+              <div class="quiz-option__icon" aria-hidden="true">~</div>
+              <div class="quiz-option__title">Good session (30–60 min)</div>
+              <p class="text-muted" style="font-size:0.85rem;margin:0">Enough time to really swim and explore</p>
+            </button>
+            <button class="quiz-option" data-category="long" onclick="showResult(this)">
+              <div class="quiz-option__icon" aria-hidden="true">~</div>
+              <div class="quiz-option__title">Endurance (1+ hour)</div>
+              <p class="text-muted" style="font-size:0.85rem;margin:0">I swim until my arms tell me to stop</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div id="quiz-result" style="display:none" class="quiz-step">
+          <div class="summary-card" style="text-align:center">
+            <h2 id="result-title" style="font-size:1.5rem;margin-bottom:var(--space-sm)"></h2>
+            <p id="result-desc" style="color:var(--color-text-light);margin-bottom:var(--space-lg)"></p>
+            <h3 style="font-size:1rem;margin-bottom:var(--space-sm)">Recommended Swim Types</h3>
+            <div id="result-types" class="tags" style="justify-content:center;margin-bottom:var(--space-lg)"></div>
+            <h3 style="font-size:1rem;margin-bottom:var(--space-sm)">Beaches for You</h3>
+            <div id="result-beaches"></div>
+            <p style="margin-top:var(--space-xl)"><a href="/lists/" class="hero__cta">Explore All Swim Lists</a></p>
+          </div>
+          <p style="text-align:center;margin-top:var(--space-lg)"><button onclick="restartQuiz()" style="background:none;border:2px solid var(--color-ocean);color:var(--color-ocean);padding:0.5rem 1.5rem;border-radius:var(--radius-md);font-weight:600;cursor:pointer;font-size:1rem">Take Quiz Again</button></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Destinations</h4>
+          <ul>
+            <li><a href="/countries/greece/">Greece</a></li>
+            <li><a href="/regions/mallorca/">Mallorca</a></li>
+            <li><a href="/cities/barcelona/swimming-beaches/">Barcelona</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Beaches</h4>
+          <ul>
+            <li><a href="/beaches/elafonissi/">Elafonissi</a></li>
+            <li><a href="/beaches/cala-varques/">Cala Varques</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Swim Lists</h4>
+          <ul>
+            <li><a href="/lists/">All Lists</a></li>
+            <li><a href="/lists/clean-water/">Clean Water Beaches</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/guides/">Swim Guides</a></li>
+            <li><a href="/guides/rip-currents/">Rip Current Safety</a></li>
+            <li><a href="/quiz/">Swimmer Quiz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>BeachSwimmer. We know water. We know swims. Here's the truth.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var answers = [];
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var toggle = document.querySelector('.nav-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', function() {
+          document.querySelector('.main-nav').classList.toggle('is-open');
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !expanded);
+        });
+      }
+    });
+
+    function selectAnswer(btn, nextId) {
+      answers.push(btn.dataset.category);
+      // Mark selected
+      var siblings = btn.parentNode.querySelectorAll('.quiz-option');
+      for (var i = 0; i < siblings.length; i++) {
+        siblings[i].classList.remove('selected');
+      }
+      btn.classList.add('selected');
+      // Show next
+      setTimeout(function() {
+        btn.closest('.quiz-step').style.display = 'none';
+        document.getElementById(nextId).style.display = 'block';
+        document.getElementById(nextId).scrollIntoView({behavior: 'smooth', block: 'start'});
+      }, 300);
+    }
+
+    function showResult(btn) {
+      answers.push(btn.dataset.category);
+      btn.classList.add('selected');
+
+      setTimeout(function() {
+        btn.closest('.quiz-step').style.display = 'none';
+
+        var result = calculateResult();
+        document.getElementById('result-title').textContent = result.title;
+        document.getElementById('result-desc').textContent = result.desc;
+
+        var typesDiv = document.getElementById('result-types');
+        typesDiv.innerHTML = '';
+        for (var i = 0; i < result.types.length; i++) {
+          var tag = document.createElement('span');
+          tag.className = 'tag';
+          tag.textContent = result.types[i];
+          typesDiv.appendChild(tag);
+        }
+
+        var beachesDiv = document.getElementById('result-beaches');
+        beachesDiv.innerHTML = '';
+        for (var j = 0; j < result.beaches.length; j++) {
+          var p = document.createElement('p');
+          var a = document.createElement('a');
+          a.href = result.beaches[j].url;
+          a.textContent = result.beaches[j].name;
+          a.style.fontWeight = '600';
+          p.appendChild(a);
+          var span = document.createElement('span');
+          span.textContent = ' — ' + result.beaches[j].note;
+          span.style.color = 'var(--color-text-light)';
+          span.style.fontSize = '0.9rem';
+          p.appendChild(span);
+          beachesDiv.appendChild(p);
+        }
+
+        document.getElementById('quiz-result').style.display = 'block';
+        document.getElementById('quiz-result').scrollIntoView({behavior: 'smooth', block: 'start'});
+      }, 300);
+    }
+
+    function calculateResult() {
+      var profiles = {
+        lagoon: {
+          title: 'The Lagoon Lover',
+          desc: 'You want calm, clear, warm water with an easy entry. No drama, no danger — just a beautiful, peaceful swim. You value clarity and comfort above everything.',
+          types: ['Calm Lagoon Swim', 'Family Swim', 'Warm Water Swim'],
+          beaches: [
+            {name: 'Elafonissi, Crete', url: '/beaches/elafonissi/', note: 'Pink-sand lagoon perfection'},
+            {name: 'Es Trenc, Mallorca', url: '/regions/mallorca/', note: 'Long warm shallow swim'},
+            {name: 'Ses Illetes, Formentera', url: '/lists/clean-water/', note: 'Caribbean-grade Mediterranean'}
+          ]
+        },
+        explorer: {
+          title: 'The Snorkel Swimmer',
+          desc: 'The swim is only half the point. You want to see what is under the surface — fish, rocks, caves, sea grass. Crystal clarity is non-negotiable.',
+          types: ['Snorkel Swim', 'Calm Lagoon Swim'],
+          beaches: [
+            {name: 'Cala Varques, Mallorca', url: '/beaches/cala-varques/', note: 'Caves and crystal water'},
+            {name: 'Sarakiniko, Milos', url: '/countries/greece/', note: 'Lunar rock, sapphire water'},
+            {name: 'Cala Mariolu, Sardinia', url: '/lists/clean-water/', note: '30m visibility'}
+          ]
+        },
+        charger: {
+          title: 'The Wave Charger',
+          desc: 'You want energy. Waves, currents, the raw power of the ocean. You are a confident swimmer who seeks the push and pull of open water.',
+          types: ['Open Ocean Swim', 'Big Wave Swim'],
+          beaches: [
+            {name: 'Falassarna, Crete', url: '/countries/greece/', note: 'West-facing surf and open swimming'},
+            {name: 'Porto Katsiki, Lefkada', url: '/countries/greece/', note: 'Deep dramatic swim with cliff entry'},
+            {name: 'Cala Sant Vicenç, Mallorca', url: '/regions/mallorca/', note: 'Deep north-coast swim'}
+          ]
+        },
+        plunger: {
+          title: 'The Cold Plunger',
+          desc: 'You live for the gasp. Cold water, wild entries, the feeling of being completely alive. You seek out swims that other people avoid.',
+          types: ['Cold Water Swim', 'Cliff-Entry Swim'],
+          beaches: [
+            {name: 'Sa Calobra, Mallorca', url: '/regions/mallorca/', note: 'Mountain-backed cold swim'},
+            {name: 'Sarakiniko, Milos', url: '/countries/greece/', note: 'Jump into deep sapphire water'},
+            {name: 'Cala Goloritzé, Sardinia', url: '/lists/clean-water/', note: 'Spring-fed, crystal cold'}
+          ]
+        },
+        endurance: {
+          title: 'The Long-Distance Beast',
+          desc: 'Swimming is your sport, not your vacation activity. You want depth, distance, and the rhythm of sustained movement through open water.',
+          types: ['Long-Distance Swim', 'Open Ocean Swim'],
+          beaches: [
+            {name: 'Bogatell, Barcelona', url: '/cities/barcelona/swimming-beaches/', note: 'Local open-water swim spot'},
+            {name: 'Cala Mondragó, Mallorca', url: '/regions/mallorca/', note: 'Bay-to-bay swim route'},
+            {name: 'Navagio, Zakynthos', url: '/countries/greece/', note: 'Enclosed deep-water swim'}
+          ]
+        },
+        floater: {
+          title: 'The Sunset Floater',
+          desc: 'You are not here to train. You are here to lie on your back and watch the sky change color while warm water holds you. The swim is the meditation.',
+          types: ['Warm Water Swim', 'Calm Lagoon Swim', 'Family Swim'],
+          beaches: [
+            {name: 'Elafonissi, Crete', url: '/beaches/elafonissi/', note: 'Bath-warm lagoon floating'},
+            {name: 'Ses Illetes, Formentera', url: '/lists/clean-water/', note: 'Turquoise perfection'},
+            {name: 'Anse Source d\'Argent, Seychelles', url: '/lists/clean-water/', note: 'Warm granite lagoon'}
+          ]
+        }
+      };
+
+      // Simple matching logic based on answers
+      var temp = answers[0]; // warm, moderate, cold
+      var style = answers[1]; // calm, explore, waves
+      var entry = answers[2]; // sand, rock, cliff
+      var company = answers[3]; // family, partner, solo
+      var duration = answers[4]; // short, medium, long
+
+      if (temp === 'cold' || entry === 'cliff') return profiles.plunger;
+      if (style === 'waves') return profiles.charger;
+      if (duration === 'long') return profiles.endurance;
+      if (style === 'explore') return profiles.explorer;
+      if (company === 'family' || (temp === 'warm' && style === 'calm' && entry === 'sand')) return profiles.lagoon;
+      if (duration === 'short' && style === 'calm') return profiles.floater;
+
+      return profiles.lagoon;
+    }
+
+    function restartQuiz() {
+      answers = [];
+      document.getElementById('quiz-result').style.display = 'none';
+      var steps = document.querySelectorAll('.quiz-step');
+      for (var i = 0; i < steps.length; i++) {
+        steps[i].style.display = 'none';
+        var btns = steps[i].querySelectorAll('.quiz-option');
+        for (var j = 0; j < btns.length; j++) {
+          btns[j].classList.remove('selected');
+        }
+      }
+      document.getElementById('q1').style.display = 'block';
+      document.getElementById('q1').scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+  </script>
+</body>
+</html>
