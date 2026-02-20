@@ -654,6 +654,152 @@ p {
   font-weight: 600;
 }
 
+/* --- Beach Detail Pages --- */
+.beach-hero {
+  padding: var(--space-2xl) 0;
+  text-align: left;
+}
+
+.beach-hero h1 {
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+}
+
+.beach-tagline {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+.swim-score-large {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--color-ocean-light);
+  border: 2px solid var(--color-ocean);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.score-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-ocean);
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+.beach-info {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+.swim-details {
+  background: var(--color-sand);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.swim-details h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  margin-bottom: var(--space-md);
+}
+
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.details-table td {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.details-table td:first-child {
+  font-weight: 600;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  padding-right: var(--space-md);
+}
+
+.details-table tr:last-child td {
+  border-bottom: none;
+}
+
+.beach-section {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.beach-section:last-child {
+  border-bottom: none;
+}
+
+.beach-section h2 {
+  margin-top: 0;
+  font-size: 1.35rem;
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.feature h3 {
+  margin-top: 0;
+  font-size: 1.05rem;
+  color: var(--color-ocean-dark);
+}
+
+.feature p {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+/* Breadcrumb (simple div variant) */
+.breadcrumb {
+  padding: var(--space-md) 0 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.breadcrumb a {
+  color: var(--color-text-muted);
+}
+
+.breadcrumb a:hover {
+  color: var(--color-ocean);
+}
+
+/* Hero left-aligned variant */
+.hero--left {
+  text-align: left;
+}
+
+.hero--left .hero__tagline {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* --- Utility Classes --- */
 .text-center { text-align: center; }
 .text-muted { color: var(--color-text-muted); }
@@ -696,6 +842,16 @@ p {
   .summary-card dl {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .feature-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .beach-hero h1 { font-size: 2.5rem; }
 
   .container {
     padding: 0 var(--space-xl);
