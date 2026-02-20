@@ -18,11 +18,16 @@
   <header class="site-header">
     <div class="container container--wide">
       <a href="/" class="site-logo" aria-label="BeachSwimmer home">Beach<span>Swimmer</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="main-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="/regions/mallorca/">Mallorca</a></li>
-          <li><a href="/">Home</a></li>
+          <li><a href="/countries/greece/">Countries</a></li>
+          <li><a href="/regions/mallorca/">Regions</a></li>
+          <li><a href="/lists/">Swim Lists</a></li>
           <li><a href="/guides/">Guides</a></li>
+          <li><a href="/quiz/">Find Your Swim</a></li>
         </ul>
       </nav>
     </div>
@@ -140,8 +145,60 @@
 
   <footer class="site-footer">
     <div class="container container--wide">
-      <p>BeachSwimmer. We know water. We know swims. Here's the truth.</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Destinations</h4>
+          <ul>
+            <li><a href="/countries/greece/">Greece</a></li>
+            <li><a href="/countries/spain/">Spain</a></li>
+            <li><a href="/countries/france/">France</a></li>
+            <li><a href="/regions/mallorca/">Mallorca</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Beaches</h4>
+          <ul>
+            <li><a href="/beaches/elafonissi/">Elafonissi</a></li>
+            <li><a href="/beaches/seitan-limania/">Seitan Limania</a></li>
+            <li><a href="/beaches/cala-varques/">Cala Varques</a></li>
+            <li><a href="/beaches/balos-lagoon/">Balos Lagoon</a></li>
+            <li><a href="/beaches/palombaggia/">Palombaggia</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Swim Lists</h4>
+          <ul>
+            <li><a href="/lists/">All Lists</a></li>
+            <li><a href="/lists/clean-water/">Clean Water Beaches</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/guides/">Swim Guides</a></li>
+            <li><a href="/guides/rip-currents/">Rip Current Safety</a></li>
+            <li><a href="/quiz/">Swimmer Quiz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>BeachSwimmer. We know water. We know swims. Here's the truth.</p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var toggle = document.querySelector('.nav-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', function() {
+          var nav = document.querySelector('.main-nav');
+          nav.classList.toggle('is-open');
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !expanded);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
